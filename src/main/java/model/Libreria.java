@@ -24,7 +24,7 @@ public class Libreria implements Serializable {
     @Column
     private String direccion;
     @ManyToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-    @JoinTable(name = "librerias_libros", joinColumns = @JoinColumn(name = "libreriaId"),inverseJoinColumns = @JoinColumn(name = "libroId"))
+    @JoinTable(name = "librerias_libros", joinColumns = @JoinColumn(name = "libreria_id"),inverseJoinColumns = @JoinColumn(name = "libro_id"))
     private List<Libro> libros;
 
     public Libreria(String nombre, String dueño, String direccion){

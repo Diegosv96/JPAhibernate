@@ -22,10 +22,10 @@ public class Libro implements Serializable {
     @Column
     private Double precio;
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "editorialId")
+    @JoinColumn(name = "editorial_id")
     private Editorial editorial;
     @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-    @JoinColumn(name = "autorId")
+    @JoinColumn(name = "autor_id")
     private Autor autor;
     @ManyToMany(mappedBy = "libros",fetch = FetchType.EAGER)
     private List<Libreria> librerias;

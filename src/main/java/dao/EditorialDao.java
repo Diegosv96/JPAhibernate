@@ -10,7 +10,7 @@ public class EditorialDao {
         session = new HibernateUtil().getSessionFactory().getCurrentSession();
         session.beginTransaction();
 
-        session.merge(editorial);
+        session.persist(editorial);
 
         session.getTransaction().commit();
         session.close();

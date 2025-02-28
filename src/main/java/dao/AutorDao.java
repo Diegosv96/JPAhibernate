@@ -13,7 +13,7 @@ public class AutorDao {
         session = new HibernateUtil().getSessionFactory().getCurrentSession();
         session.beginTransaction();
 
-        session.merge(autor);
+        session.persist(autor);
 
         session.getTransaction().commit();
         session.close();
