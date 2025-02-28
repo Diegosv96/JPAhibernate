@@ -20,16 +20,16 @@ public class Libreria implements Serializable {
     @Column
     private String nombre;
     @Column
-    private String dueño;
+    private String dueno;
     @Column
     private String direccion;
     @ManyToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinTable(name = "librerias_libros", joinColumns = @JoinColumn(name = "libreria_id"),inverseJoinColumns = @JoinColumn(name = "libro_id"))
     private List<Libro> libros;
 
-    public Libreria(String nombre, String dueño, String direccion){
+    public Libreria(String nombre, String dueno, String direccion){
         this.nombre = nombre;
-        this.dueño = dueño;
+        this.dueno = dueno;
         this.direccion = direccion;
     }
 
@@ -38,7 +38,7 @@ public class Libreria implements Serializable {
         return "Libreria{" +
                 "id=" + id +
                 ", nombre=" + nombre +
-                ", dueño=" + dueño +
+                ", dueno=" + dueno +
                 ", direccion=" + direccion +
                 '}';
     }*/
