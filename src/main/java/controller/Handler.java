@@ -62,7 +62,7 @@ public class Handler {
                 libroSTR += "Libreria{" +
                         "id=" + libre.getId() +
                         ", nombre=" + libre.getNombre() +
-                        ", dueño=" + libre.getDueño() +
+                        ", dueno=" + libre.getDueno() +
                         ", direccion=" + libre.getDireccion() +
                         '}';
             }
